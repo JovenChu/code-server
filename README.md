@@ -1,2 +1,11 @@
-# code-server
-The docker for online IDE using code-server
+# Code-Server——AI中台云端IDE的部署实践
+知乎查看：[https://zhuanlan.zhihu.com/p/415071043](https://zhuanlan.zhihu.com/p/522461214?)
+
+一. 简介
+Code-Server 是一个可以在远程服务器（Ubuntu、Centos）上运行微软VS Code 的工具，可以在浏览器进行访问，来达到近乎本地的体验效果。相比目前主流AI中台中常见的jupyter notebook的线上编程解决方案（仅比较适用于数据分析任务，对大型的NLP、CV任务开发效率低），可以在Code-Server中体验到【在线调试、代码自动补全、丰富插件、代码跟踪】等本地IDE的功能，非常好用。
+
+可惜的是目前仅被大家用来作为个人的线上编码工具，尚未集成到系统中。本文将探究将Code-Server集成为Docker，后续可以作为镜像和容器，结合深度学习框架，作为AI中台系统对notebook的代替。优势如下：
+
+1. 我们可以通过浏览器，随时随地利用到强大的服务器GPU资源，更快的完成对SOTA任务的复现。
+2. 结合AI中台里K8s、Rancher等镜像和容器调度技术，可以将常用的环境一键制作，多处（开发、训练、部署）迁移复用。
+3. 云的魅力，很爽，亲测3个月了，回不去了。
